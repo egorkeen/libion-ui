@@ -20,4 +20,11 @@ export default defineConfig({
       store: path.resolve(__dirname, "src/store"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern",
+      },
+    },
+  },
 });

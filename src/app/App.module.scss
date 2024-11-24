@@ -1,0 +1,13 @@
+@use "/src/styles/colors.scss" as colors;
+@use "/src/styles/reset.scss";
+
+html {
+  background-color: colors.$black02;
+}
+
+body {
+  max-width: 1296px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}

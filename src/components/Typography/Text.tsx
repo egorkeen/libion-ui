@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import { FC, memo } from "react";
 import styles from "./Typography.module.scss";
-import clsx from "clsx";
 
 interface TextProps extends React.HtmlHTMLAttributes<HTMLParagraphElement> {
   type: "big" | "medium";

@@ -38,8 +38,8 @@ export default [
         {
           groups: [
             ["builtin", "external"],
-            ["internal"],
-            ["parent", "sibling"],
+            ["parent"],
+            ["internal", "sibling"],
             ["index"],
             ["type"],
           ],
