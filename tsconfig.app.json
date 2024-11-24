@@ -32,7 +32,7 @@
       "utils/hooks": ["src/utils/hooks"],
       "utils/helpers": ["src/utils/helpers"],
       "utils/transformers": ["src/utils/transformers"],
-      "assets": ["src/assets"],
+      "assets/*": ["src/assets/*"],
       "store": ["src/store"]
     }
   },

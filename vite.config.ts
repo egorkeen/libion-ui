@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import tsconfigPaths from "vite-tsconfig-paths";
 import path from "path";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
@@ -16,7 +16,7 @@ export default defineConfig({
       "utils/hooks": path.resolve(__dirname, "src/utils/hooks"),
       "utils/helpers": path.resolve(__dirname, "src/utils/helpers"),
       "utils/transformers": path.resolve(__dirname, "src/utils/transformers"),
-      assets: path.resolve(__dirname, "src/assets"),
+      "assets/*": path.resolve(__dirname, "src/assets/*"),
       store: path.resolve(__dirname, "src/store"),
     },
   },
