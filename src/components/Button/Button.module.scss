@@ -1,0 +1,27 @@
+@use "/src/styles/colors.scss" as colors;
+
+.button {
+  color: colors.$white01;
+  font-size: 20px;
+  line-height: 22px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: none;
+  border: 4px solid colors.$red01;
+  padding: 12px 20px;
+  border-radius: 22px;
+  transition: .1s;
+
+  &:hover {
+    background-color: colors.$red01;
+  }
+
+  &:active {
+    opacity: .9;
+  }
+}
