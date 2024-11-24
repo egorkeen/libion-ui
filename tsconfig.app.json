@@ -27,6 +27,11 @@
       "components": ["src/components"],
       "pages": ["src/pages"],
       "utils": ["src/utils"],
+      "utils/types": ["src/utils/types"],
+      "utils/constants": ["src/utils/constants"],
+      "utils/hooks": ["src/utils/hooks"],
+      "utils/helpers": ["src/utils/helpers"],
+      "utils/transformers": ["src/utils/transformers"],
       "assets": ["src/assets"],
       "store": ["src/store"]
     }
