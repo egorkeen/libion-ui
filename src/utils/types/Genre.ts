@@ -54,4 +54,5 @@ interface Genre {
   total_releases: number;
 }
 
-export type { Genre, GenreType };
+export { GenreType };
+export type { Genre };

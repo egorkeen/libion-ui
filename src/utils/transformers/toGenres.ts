@@ -1,5 +1,4 @@
-import { isGenre } from "utils/helpers";
-import { Genre } from "utils/types";
+import { Genre, isGenre } from "utils/types";
 import { toArray } from "./index";
 
 export const toGenres = (value: unknown) => {

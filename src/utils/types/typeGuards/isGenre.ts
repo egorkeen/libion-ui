@@ -1,5 +1,5 @@
 import { Genre } from "utils/types";
-import { isRecord } from "../index";
+import { isRecord } from "../../helpers/index";
 
 export const isGenre = (value: unknown): value is Genre => {
   if (isRecord(value) && isRecord(value.image)) {

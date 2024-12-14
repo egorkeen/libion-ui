@@ -3,5 +3,3 @@ export const isRecord = (value: unknown): value is Record<string, unknown> =>
   value !== null &&
   !Array.isArray(value) &&
   !(value instanceof Function);
-
-export * from "./typeGuards";
