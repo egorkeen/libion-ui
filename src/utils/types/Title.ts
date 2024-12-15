@@ -8,7 +8,7 @@ type TitleType = {
 type TitleName = {
   main: string;
   english: string;
-  alternative: string;
+  alternative: string | null;
 };
 
 type TitleSeason = {
@@ -33,8 +33,39 @@ type TitleAgeRating = {
 };
 
 type TitlePublishDay = {
-  value: string;
+  value: number;
   description: string;
+};
+
+type LatestEpisode = {
+  id: string;
+  name: string;
+  ordinal: number;
+  opening: {
+    stop: number;
+    start: number;
+  };
+  ending: {
+    stop: number;
+    start: number;
+  };
+  preview: {
+    src: string;
+    thumbnail: string;
+    optimized: {
+      src: string;
+      thumbnail: string;
+    };
+  };
+  hls_480: string;
+  hls_720: string;
+  hls_1080: string;
+  duration: number;
+  rutube_id: string | null;
+  youtube_id: string | null;
+  updated_at: string;
+  sort_order: number;
+  name_english: string | null;
 };
 
 type Title = {
@@ -52,7 +83,7 @@ type Title = {
   is_ongoing: boolean;
   age_rating: TitleAgeRating;
   publish_day: TitlePublishDay;
-  description: string;
+  description: string | null;
   notification: string | null;
   episodes_total: number | null;
   external_player: string | null;
@@ -62,6 +93,7 @@ type Title = {
   is_blocked_by_copyrights: boolean;
   added_in_users_favorites: number;
   average_duration_of_episode: number;
+  latest_episode: LatestEpisode;
 };
 
 export type { Title };

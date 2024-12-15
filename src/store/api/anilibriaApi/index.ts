@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { toGenres } from "utils/transformers";
 import { Genre, Title } from "utils/types";
-import { GetTitlesByGenreRequest } from "./types";
+import { GetLatestReleases, GetTitlesByGenreRequest } from "./types";
 import { BasePaginationResponse } from "./types/BasePaginationResponse";
+import { toGenres, toLatestReleases, toLatestReleasesUrl } from "./utils";
 
 export const anilibriaApi = createApi({
   reducerPath: "anilibriaApi",
@@ -23,7 +23,17 @@ export const anilibriaApi = createApi({
         url: `anime/genres/${args.genreId}/releases`,
       }),
     }),
+    getLatestReleases: builder.query<Title[], GetLatestReleases>({
+      query: (args) => ({
+        url: toLatestReleasesUrl(args),
+      }),
+      transformResponse: toLatestReleases,
+    }),
   }),
 });
 
-export const { useGetGenresQuery, useGetTitlesByGenreQuery } = anilibriaApi;
+export const {
+  useGetGenresQuery,
+  useGetTitlesByGenreQuery,
+  useGetLatestReleasesQuery,
+} = anilibriaApi;
